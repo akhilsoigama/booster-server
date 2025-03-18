@@ -4,7 +4,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 const allowedOrigins = isProduction
   ? ['https://boosters-sooty.vercel.app']
-  : ['http://localhost:3000', 'http://localhost:5000'];
+  : ['http://localhost:3000', 'http://localhost:5000','https://booster-server-one.vercel.app'];
 
 const corsOptions = {
   origin: function (origin, callback) {
