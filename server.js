@@ -9,23 +9,20 @@ const connectDB = require('./lib/connection');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
-
 connectDB();
 
-app.use(express.json()); 
-app.use(cookieParser()); 
+app.use(express.json());
+app.use(cookieParser());
 app.use(cors);
 
 app.use('/api', authRoutes);
-app.use('/api', userRoutes); 
-app.use('/api', postRouter); 
+app.use('/api', userRoutes);
+app.use('/api', postRouter);
 app.use('/api', profileRouter);
 
 app.get('/', (req, res) => {
-  res.send('<h1>welcome to home page</h1>');
+  res.send('<h1>Welcome to Home Page 🚀</h1>');
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+
+module.exports = app;
