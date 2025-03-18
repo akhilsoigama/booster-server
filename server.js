@@ -23,7 +23,7 @@ app.use('/api', postRouter);
 app.use('/api', profileRouter);
 
 app.get('/', (req, res) => {
-  res.send('<h1>This is the home page</h1>');
+  res.send('<h1>welcome to home page</h1>');
 });
 
 app.listen(PORT, () => {
